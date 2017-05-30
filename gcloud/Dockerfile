@@ -17,8 +17,8 @@ RUN apt-get -y update && \
         --bash-completion=false \
         --disable-installation-options && \
 
-    # Install alpha and beta components
-    /builder/google-cloud-sdk/bin/gcloud -q components install alpha beta && \
+    # Install alpha, beta, and kubectl components
+    /builder/google-cloud-sdk/bin/gcloud -q components install alpha beta kubectl && \
     /builder/google-cloud-sdk/bin/gcloud -q components update && \
 
     # install crcmod: https://cloud.google.com/storage/docs/gsutil/addlhelp/CRC32CandInstallingcrcmod
